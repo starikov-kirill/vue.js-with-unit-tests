@@ -1,0 +1,15 @@
+.btn-clean {
+  border: none;
+  text-align: left;
+  background: none;
+  outline: none;
+  user-select: none;
+  padding: 0;
+  line-height: 1;
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover, &:focus, &:active {
+    background-color: transparent
+  }
+}
