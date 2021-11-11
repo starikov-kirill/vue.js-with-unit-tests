@@ -20,7 +20,7 @@
                @click.stop="selectCategory($event, category)"
             >
               {{ category.name }}
-              <i v-if="category.submenu" class="icon right" />
+              <i v-if="category.submenu" class="icon-arrow-right" />
             </a>
           </li>
         </ul>
@@ -115,23 +115,23 @@ export default {
 .site-navigation {
   position: absolute;
   left: 0;
-  top: 142px;
+  top: $header-height-desktop;
   display: flex;
   flex-direction: column;
   grid-area: site-navigation;
   list-style-type: none;
   width: 100%;
-  height: calc(100vh - 142px);
+  height: calc(100vh - #{$header-height-desktop});
   z-index: 1;
   padding-left: 0;
 
   @media (min-width: $screen-md){
-    height: calc(100vh - 84px);
-    top: 84px;
+    height: calc(100vh - #{$header-height-mobile});
+    top: $header-height-mobile;
   }
 
   &__wrapper {
-    min-height: calc(100%);
+    min-height: 100%;
     overflow-y: auto;
     position: relative;
     background-color: $white;
@@ -178,7 +178,7 @@ export default {
       }
     }
 
-    .icon {
+    .icon-arrow-right {
       margin-left: auto;
     }
   }

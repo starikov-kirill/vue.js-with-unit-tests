@@ -5,14 +5,14 @@
             type="button"
             @click.stop="onBack"
     >
-      <i class="icon left" />
+      <i class="icon-arrow-left" />
       <span>{{ selectedCategory.name }}</span>
     </button>
     <button type="button"
             class="btn-clean navigation-header__close"
             @click="closeMenu"
     >
-      <i class="icon close" />
+      <i class="icon-close" />
     </button>
   </div>
 </template>
@@ -52,12 +52,13 @@ export default {
   background-color: darken(white, 3%);
   user-select: none;
 
-  .left {
+  .icon-arrow-left {
     position: absolute;
     top: 50%;
     bottom: 50%;
     transform: translate(-50%, -50%);
     left: 0;
+    height: 12px;
   }
 
   &__back {
